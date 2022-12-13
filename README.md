@@ -28,6 +28,8 @@ The remote machine from which you run Veeam PowerShell commands must have the Ve
 
 Follow this [link](https://helpcenter.veeam.com/docs/backup/vsphere/install_console.html?ver=110) to get more information. 
 
+# Scripts
+
 The script named "Veeam_B&R_Configuration.ps1" performs the following tasks:
 
 - Management of credentials
