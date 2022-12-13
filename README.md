@@ -1,16 +1,15 @@
 # Introduction
 
-Veeam Backup & Replication comes with the PowerShell extension — a Veeam Backup PowerShell module that is added to your machine when you either install Veeam Backup & Replication server or the Veeam Backup & Replication Console. 
+Veeam Backup & Replication comes with the PowerShell extension, a Veeam Backup PowerShell module that is added to your machine when you either install Veeam Backup & Replication server or the Veeam Backup & Replication Console. 
 
-The Veeam Backup PowerShell module allows you to do almost all operations that are available in the user interface. Keep in mind that actions performed with PowerShell have the same force as actions performed using Veeam Backup & Replication: for example, if you delete a job with a PowerShell script, the job will be removed from the Veeam Backup & Replication database, and you will not be able to undo changes. In order to run Veeam PowerShell commands, you must start a PowerShell session.
+The Veeam Backup PowerShell module allows you to do almost all operations that are available in the user interface. Keep in mind that actions performed with PowerShell have the same force as actions performed using Veeam Backup & Replication.
 
 Each cmdlet acts as a single-function command that can perform multiple operations with these objects. Objects represent instances of the Veeam backup infrastructure: jobs, databases, restore sessions and so on.
 
 # Requirements
 
-A machine that runs the PowerShell session must have Windows PowerShell version 5.1 or later installed.
-or
-Native console installed in Veeam Backup & Replication UI.
+- A machine that runs the PowerShell session must have Windows PowerShell version 5.1 or later installed.
+- The native console installed in Veeam Backup & Replication UI.
 
 # Sessions
 
@@ -29,12 +28,15 @@ The remote machine from which you run Veeam PowerShell commands must have the Ve
 
 Follow this [link](https://helpcenter.veeam.com/docs/backup/vsphere/install_console.html?ver=110) to get more information. 
 
-Thus, I have provided a script responding to the customer request, it is able to implement the following features:
+The script named "Veeam_B&R_Configuration.ps1" performs the following tasks:
 
-User creation;
-Machine to be backed up;
-Lists to which these machines belong; Backup job creations;
-Definition of backup servers.
+- Management of credentials
+- Management of backup repositories
+- Management of Veeam agents (credentials and containers)
+- Management of protection groups
+- Jobs management
+
+This script is general purpose, it is made to configure Veeam globally.
 
 ### Sources 
 [Veeam Documentation](https://helpcenter.veeam.com/docs/backup/powershell/getting_started.html?ver=110)
